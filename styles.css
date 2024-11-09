@@ -1,0 +1,514 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'Montserrat', 'Helvetica Neue', Helvetica;
+    color: white;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+html, body {
+    height: 100%;
+}
+
+/* Allow the body to scroll */
+body {
+    overflow: scroll;  /* Enables scrolling even though scrollbars are hidden */
+}
+
+/* Hide scrollbar for Webkit browsers */
+::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    background-image: url("templates/background.jpg");
+    background-size: 100%;
+    background-position: center -400px;
+    background-attachment: fixed;
+}
+
+#innershadow {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh; 
+    box-shadow: inset 0px 70px 70px rgba(0, 0, 0, 0.65); 
+    pointer-events: none; 
+    z-index: -1; 
+}
+
+/* nav {
+    position: sticky;
+    height: 100px;
+    z-index: 1000;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    letter-spacing: 0.1em;
+} */
+
+nav {
+    position: fixed;          /* Keeps nav fixed at the top */
+    top: 0;
+    z-index: 1000; /* Ensure the nav stays on top of other content */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 0.1em;
+    height: 100px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Optional shadow for the nav */
+    background-color: transparent; /* Initially transparent */
+    transition: height 0.2s ease ,background-color 0.3s ease; /* Smooth transition */
+
+    width: 100%;
+}
+
+#nav-menu-container{
+    /* height: 100%; */
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    width: 60%;
+
+    /* border: 1px solid white; */
+}
+
+nav ul.nav-menu-items {
+    list-style-type: none;
+
+    display: flex;
+    justify-content: space-between;
+
+    font-size: 1.0em;
+    font-weight: 100;
+
+    width: 40%;
+    padding: 0;
+    
+    /* border: 1px solid white; */
+}
+
+a {
+    text-decoration: none;
+}
+
+a#nav-name { 
+    font-weight: 600;
+    font-size: 1.85em;
+    /* border: 1px solid white; */
+    transition: font-size 0.3s ease;
+}
+
+.welcome-container {
+    /* border: 1px solid white; */
+    height: calc(100vh - 100px);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#profile-pic img{
+    width: 250px;
+    height: 250px;
+
+    border-radius: 50%;
+    border: 10px solid white;
+
+    margin-top: 200px;
+    margin-bottom: 50px;
+}
+
+label#profile-pic-label{
+    font-size: 5em;
+    font-weight: 600;
+}
+
+span#short-caption{
+    font-size: 1.2em;
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+
+/* Container for scroll indicator */
+.scroll-indicator {
+    position: relative;        /* Positions it over other content */
+    top: 120px;              /* Places it near the bottom of the viewport */
+    text-align: center;
+    font-family: Arial, sans-serif;
+    color: white;              /* Text color for visibility */
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* Text styling */
+.scroll-indicator span {
+    display: block;
+    margin-bottom: 0px;        /* Adds space between text and arrow */
+    font-weight: bold;
+}
+
+/* Animated arrow */
+.scroll-indicator .arrow-down {
+    width: 24px;
+    height: 24px;
+    border-left: 2px solid white;
+    border-bottom: 2px solid white;
+    transform: rotate(-45deg);
+    animation: bounce 1.5s infinite;
+    margin: 0 auto;
+}
+
+/* Bounce animation for the arrow */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0) rotate(-45deg);
+    }
+    50% {
+        transform: translateY(10px) rotate(-45deg); /* Moves the arrow down slightly */
+    }
+}
+
+#about-container {
+    height: calc(100vh - 50px);
+    /* border: 3px solid red; */
+
+    position: relative;
+    top: 50px;
+
+    padding-top: 50px;
+}
+
+#about-banner {
+    padding: 20px;
+
+    background-color: white;
+
+    height: 130px;
+    /* border: 1px solid black; */
+
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#about-banner a,img {
+    height: 100%;
+}
+
+#about-me-caption {
+    height: calc(100vh - 180px);
+    background-color: #edeeef;
+
+    /* height: calc(100vh - 180px); */
+
+    /* border: 1px solid black; */
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#about-me-text-container {
+    /* border: 1px solid red; */
+    
+    height: 100%;
+    width: 90%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
+}
+
+#hi-there-text {
+    height: 50%;
+    width: 40%;
+    
+    /* border: 1px solid blue; */
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 7.5em;
+    color: black !important;
+}
+
+#about-me-text {
+    height: 50%;
+    width: 40%;
+    
+    /* border: 1px solid red; */
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    margin-right: 200px;
+}
+
+#about-me-text h2 {
+    padding: 5px;
+
+    color: black;
+    font-weight: 400;
+    font-size: 2.5em;
+}
+
+#about-me-text h3 {
+    padding: 5px;
+
+    color: black;
+    font-weight: 400;
+    font-size: 1.5em;
+}
+
+#about-me-text p {
+    color: black;
+    font-weight: 100;
+    font-size: 1.0em;
+
+    padding: 5px;
+}
+
+#social-icons {
+    /* border: 1px solid black; */
+
+    width: 7%;
+
+    display: flex;
+    justify-content: space-between;
+
+    position: relative;
+    bottom: 70px; 
+}
+
+.fab.fa-linkedin {
+    font-size: 3em;
+    color: black;
+}
+
+.fab.fa-github {
+    font-size: 3em;
+    color: black;
+}
+
+#skills-container {
+    /* border: 3px solid green; */
+    height: 120vh;
+
+    /* border: 3px solid red; */
+
+    position: relative;
+    top: 100px;
+
+    padding-top: 80px;
+
+    background-color: #4A90E2;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#skills-caption {
+    /* border: 1px solid black; */
+    width: fit-content;
+    text-align: center;
+}
+
+#skills-caption h1 {
+    font-size: 3em;
+}
+
+.skills-section {
+    text-align: center;
+
+    width: 450px;
+    /* border: 1px solid black; */
+
+    max-height: 400px;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    padding-top: 20px;
+}
+
+.skills-section p {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.fa-brands.fa-java, .fa-brands.fa-python, .fa-solid.fa-brain, .fa-solid.fa-database, .fa-solid.fa-share-nodes, .fa-solid.fa-code {
+    background-color: white;
+    padding: 20px;
+
+    height: fit-content;
+    width: fit-content;
+
+    border-radius: 50%;
+
+    color: #5382A1;  /* Typical Java blue color */
+    font-size: 3em;  /* Adjust size as needed */
+}
+
+.fa-solid.fa-gears {
+    position: absolute;
+    color: #ffffff;  /* Typical Java blue color */
+    font-size: 1.6em;  /* Adjust size as needed */
+
+    transform: rotate(120deg);
+}
+
+#skills {
+    /* border: 3px solid green; */
+
+    display: flex;
+    justify-content: space-between;
+    
+    flex-wrap: wrap;
+
+    width: 1500px;
+    height: 800px;
+
+    margin: 50px auto;
+
+    padding: 10px;
+}
+
+.icon {
+    width: 100px;
+    height: 100px;
+    background-color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.timeline-caption {
+    /* border: 1px solid black; */
+    width: 50%;
+    text-align: center;
+}
+
+/* Container for the timeline */
+.timeline {
+    height: 100%;
+
+    position: relative;
+    top: 100px;
+    bottom: 100px;
+
+    width: 100%;
+    margin: 0 auto;
+    padding: 100px 0;
+
+    background-color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    border: 1px solid black;
+}
+
+.timeline .timeline-caption h1, .timeline-caption p{
+    color: black;
+}
+
+/* Style for each timeline item */
+.timeline-item {
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    position: relative;  
+}
+
+/* Style for the icons in the center */
+.timeline-icon {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #fff;
+    border: 3px solid #979797;
+    border-radius: 50%;
+    padding: 25px;
+    z-index: 1; /* Ensure the icon appears on top of the lines */
+}
+
+/* Optional: style for the timeline icons */
+.timeline-icon i {
+    font-size: 24px;
+    color: black;
+}
+
+/* The content of each timeline item */
+.timeline-content {
+    background-color: #fff;
+    padding: 10px 20px;
+    border-radius: 8px;
+    /* border: 2px solid #333; */
+    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+    width: 300px;
+
+    font-size: 1.3em;
+}
+
+.timeline-content h3, .timeline-content p{
+    color: black;
+}
+
+/* Align items on the left and right alternatively */
+.timeline-item:nth-child(odd) .timeline-content {
+    margin-right: 500px;
+}
+
+.timeline-item:nth-child(even) .timeline-content {
+    margin-left: 500px;
+}
+
+/* Style for the line connecting the items */
+.timeline::before {
+    content: '';
+    position: absolute;
+    top: 300px;
+    bottom: 100px;
+    left: 50%;
+    width: 2px;
+    background: #979797;
+    z-index: 0; /* Line should be beneath the icons and content */
+}
+
+#uoi-icon {
+    height: 100px;
+    width: 100px;
+}
+
+#nav-menu-container a {
+    transition: color ease-in-out 0.2s;
+}
+
+a#nav-name:hover {
+    color: #4A90E2;
+}

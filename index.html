@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>George Balanos | Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <span id="start"></span>
+    
+    <nav>
+        <div id="nav-menu-container">
+            <a href="#start" id="nav-name">George Balanos</a>
+
+            <ul class="nav-menu-items">
+                <li><a href="#about-container" id="about-container-text">ABOUT</a></li>
+                <li><a href="#skills-container" id="skills-container-text">SKILLS</a></li>
+                <li><a href="#timeline-section" id="timeline-container-text">TIMELINE</a></li>
+            </ul>
+        </div> 
+    </nav>
+
+    <div id="innershadow"></div>
+
+    <div class="welcome-container">
+        <div id="profile-pic">
+            <img src="templates/profile_pic.jpg" id="profile_picture" alt="profile-pic">  
+        </div>
+        
+        <label for="profile_picture" id="profile-pic-label">George Balanos</label>
+        <span id="short-caption">Undergraduate Student - AI Researcher Intern @ Archimedes AI</span>
+
+        <div class="scroll-indicator">
+            <a href="#about-container"> <!-- Link to the about section -->
+                <span>Scroll down</span>
+                <div class="arrow-down"></div>
+            </a>
+        </div>
+    </div>
+
+    <div id="about-container">
+        <div id="about-banner">
+            <a href="https://www.cse.uoi.gr/?lang=en" target="_blank"><img src="templates/logo-footer.png"  alt="uoi"></a>
+            <a href="https://archimedesai.gr/en/" target="_blank"><img src="templates/images.png" href="https://archimedesai.gr/en/" alt="uoi"></a>
+        </div>
+
+        <div id="about-me-caption">
+            <div id="about-me-text-container">
+                <div id="hi-there-text">
+                    HI THERE!
+                </div>
+
+                <div id="about-me-text">
+                    <h2>George Balanos</h2><br>
+                    <h3>Undergraduate student, Software Engineer, and AI(fairness) Researcher</h3><br>
+                    <p>
+                        Student of Computer Science and Engineering at the University of 
+                        Ioannina, with a focus on software development/engineering, 
+                        algorithms, and artificial intelligence. Dedicated to solving complex 
+                        problems and contributing to technological advancements. Always 
+                        learning and open to new opportunities for personal and professional 
+                        growth. 
+                    </p>
+                    
+                </div>
+            </div>
+
+            <p style="color: black;">LinkedIn / Github</p>
+            <!-- Social icons container -->
+            <div id="social-icons">
+                <a href="https://www.linkedin.com/in/george-balanos-b51a1a281/" target="_blank" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://github.com/George-Balanos" target="_blank" aria-label="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div id="skills-container">
+        <div id="skills-caption">
+            <h1>Skills</h1>
+            <p>Below are some skills I've acquired throughout the years in my bachelor's degree.</p>
+        </div>
+        <div id="skills">
+            <div class="skills-section">
+                <div class="icon"><i class="fa-brands fa-java"></i></div>
+                <div><p>Proficient in Java for developing robust web applications and implementing complex algorithms. Experienced in building web applications using Spring Boot and Thymeleaf, enabling dynamic and interactive web pages with efficient back-end processing. Skilled in implementing core algorithms and graph algorithms to solve complex problems and optimize performance. Additionally, familiar with Apache Lucene for creating effective search engine capabilities within applications, enhancing data retrieval and user experience.</p></div>
+            </div>
+            <div class="skills-section">
+                <div class="icon"><i class="fa-brands fa-python"></i></div>
+                <div><p>Experienced in Python for advanced data handling and optimization. Proficient in complex data management, leveraging Python's extensive libraries and tools to organize, analyze, and process large datasets effectively. Knowledgeable in compiler design, understanding the intricacies of code translation and execution. Skilled in optimization methods to enhance algorithm efficiency and performance, applying these techniques across various projects to solve computationally intensive problems.</p></div>
+            </div>
+            <div class="skills-section">
+                <div class="icon"><i class="fa-solid fa-brain"></i><i class="fa-solid fa-gears"></i></div>
+                <div><p>With a strong foundation in Artificial Intelligence (AI), I have gained hands-on experience in developing intelligent systems that simulate human decision-making processes. I am well-versed in a range of AI techniques, including machine learning, deep learning, and natural language processing, which I’ve applied to build data-driven solutions for real-world challenges. My experience includes designing and implementing models that enhance automation, improve predictions, and optimize decision-making in complex environments. I am passionate about leveraging AI to develop scalable and efficient systems that drive innovation in various industries.</p></div>
+            </div>
+            <div class="skills-section">
+                <div class="icon"><i class="fa-solid fa-database"></i></div>
+                <div><p>Alongside my AI expertise, I am proficient in MySQL for managing relational databases, ensuring efficient data storage and retrieval. I possess a strong understanding of Data Structures and Algorithms, enabling me to optimize code for better performance. Additionally, I have experience in Information Retrieval, developing systems to efficiently handle large datasets, and apply Computational Methods to solve complex problems. My skills in Data Management ensure effective organization and processing of information across various applications.</p></div>
+            </div>
+            <div class="skills-section">
+                <div class="icon"><i class="fa-solid fa-share-nodes"></i></div>
+                <div><p>I have a strong understanding of Graph Theory, applying it to solve complex problems in areas such as network analysis, pathfinding algorithms, and optimization. I am proficient in designing and implementing graph-based algorithms, including depth-first search (DFS), breadth-first search (BFS), shortest path algorithms, and minimum spanning tree algorithms. My knowledge extends to practical applications, such as analyzing social networks, transportation systems, and data structures, enabling me to develop efficient solutions for real-world challenges.</p></div>
+            </div>
+            <div class="skills-section">
+                <div class="icon"><i class="fa-solid fa-code"></i></div>
+                <div><p>I have a strong foundation in Software Development, with expertise in both front-end and back-end technologies. I am skilled in HTML and CSS, creating responsive and user-friendly websites with a focus on clean, maintainable code. My experience extends to C, where I’ve worked with CUDA for parallel computing, MPI for distributed systems, and Parallel Systems for optimizing performance across multiple processors. Additionally, I have hands-on experience in Automation Testing, utilizing various tools to ensure the reliability and efficiency of software applications, reducing manual intervention and improving overall development cycles.</p></div>
+            </div>
+            
+        </div>
+    </div>
+
+    <div class="timeline" id="timeline-section">
+        <div class="timeline-caption">
+            <h1>Timeline</h1>
+            <p>Highlights of my career and achievements.</p>
+        </div>
+        <div class="timeline-item">
+            <div class="timeline-icon">
+                <a href="https://archimedesai.gr/en/" target="_blank"><img src="templates/images1.png" href="https://archimedesai.gr/en/" id="uoi-icon" alt="uoi"></a>
+            </div>
+            <div class="timeline-content">
+                <h3>2024 - Present</h3>
+                <p>AI Researcher Intern at Archimedes AI</p>
+            </div>
+        </div>
+        <div class="timeline-item">
+            <div class="timeline-icon">
+                <a href="https://www.terracom.gr/" target="_blank"><img src="templates/images (1).png" href="https://www.terracom.gr/" id="uoi-icon" alt="uoi"></a>
+            </div>
+            <div class="timeline-content">
+                <h3>Jul 2024 - Aug 2024</h3>
+                <p>Terracom S.A. Internship<br>Software engineering & QA Testing </p>
+            </div>
+        </div>
+        <div class="timeline-item">
+            <div class="timeline-icon">
+                <a href="https://www.cse.uoi.gr/?lang=en" target="_blank"><img src="templates/logo-footer.png" id="uoi-icon"  alt="uoi"></a>
+            </div>
+            <div class="timeline-content">
+                <h3>2020-Present</h3>
+                <p>University of Ioannina,<br>Department of Computer Science and Engineering</p>
+            </div>
+        </div>
+    </div>
+    
+
+
+</body>
+</html>
+
+<script>
+    // Get the nav element
+    const nav = document.querySelector('nav');
+    const navName = document.querySelector('#nav-name');
+
+    const about = document.querySelector('#about-container-text');
+    const skills = document.querySelector('#skills-container-text');
+    const timeline = document.querySelector('#timeline-container-text');
+
+    // Function to change the navbar background color on scroll
+    window.onscroll = function () {
+        if (window.scrollY <= 100) {  // Change 50px to the scroll position you prefer
+            nav.style.height = "100px";
+            navName.style.fontSize = "1.85em";
+            nav.style.backgroundColor = 'transparent';  // Transparent background when at the top
+        } else if (window.scrollY > 10) {
+            nav.style.height = "50px";
+            navName.style.fontSize = "1.1em";
+            nav.style.backgroundColor = '#333';  // Dark background color when scrolled
+        }
+
+        if (window.scrollY > 100 && window.scrollY <= 900){
+            //console.log(window.scrollY)
+            about.style.color = '#4A90E2';
+            skills.style.color = 'white';
+            timeline.style.color = 'white';
+        }else if (window.scrollY > 900 && window.scrollY <= 1800){
+            //console.log(window.scrollY)
+            about.style.color = 'white';
+            skills.style.color = '#4A90E2';
+            timeline.style.color = 'white';
+        } else if (window.scrollY > 1800) {
+            //console.log(window.scrollY)
+            about.style.color = 'white';
+            skills.style.color = 'white';
+            timeline.style.color = '#4A90E2';
+        } else if (window.scrollY < 100) {
+            about.style.color = 'white';
+            skills.style.color = 'white';
+            timeline.style.color = 'white';
+        }
+
+    };
+</script>

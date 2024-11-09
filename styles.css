@@ -24,7 +24,7 @@ body {
 }
 
 body {
-    background-image: url("templates/background.jpg");
+    background-image: url("background.jpg");
     background-size: 100%;
     background-position: center -400px;
     background-attachment: fixed;
